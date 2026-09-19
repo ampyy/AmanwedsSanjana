@@ -1,0 +1,538 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta property="og:title" content="ShaadiPath — Wedding Website Template" />
+<meta property="og:description" content="Preview this wedding invitation template. Create your own beautiful wedding website with ShaadiPath." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://shaadipath.com/api/preview/guest?template=template11" />
+<meta property="og:image" content="https://shaadipath.com/images/og/og-template11.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="ShaadiPath — Wedding Website Template" />
+<meta name="twitter:description" content="Preview this wedding invitation template. Create your own beautiful wedding website with ShaadiPath." />
+<meta name="twitter:image" content="https://shaadipath.com/images/og/og-template11.png" />
+<script type="application/json" id="wedding-config">{"couple":{"bride":"Sanjana","groom":"Aman","date":"2027-02-14","venue":"Anandam Green Resort, Sehore","whatsapp":"","hashtag":"#AmanWedsSanjana"},"invite":{"blessing":"","brideFather":"Mr. Manoj Kumar Pathak","brideMother":"Mrs. Bachchi Devi","groomFather":"Mr. Srinivas Gudimalla","groomMother":"Mrs. Sunitha Gudimalla","showGrandparents":true,"brideGF":"Mr. Shovakant Pathak","brideGM":"Late Mrs. Prabha Devi","groomGF":"Late Mr. Ramulu","groomGM":"Mrs. Gouru Bai"},"events":[{"id":"bhaat","name":"Bhaat","date":"2027-02-14","time":"11:00 AM - 1:00 PM","venue":"Anandam Green Resort, Sehore"},{"id":"haldi","name":"Haldi","date":"2027-02-14","time":"2:00 PM - 5:00 PM","venue":"Anandam Green Resort, Sehore"},{"id":"sangeet","name":"Sangeet","date":"2027-02-14","time":"7:00 PM - 10:00 PM","venue":"Anandam Green Resort, Sehore"},{"id":"phere","name":"Phere","date":"2027-02-15","time":"10:00 AM - 4:00 PM","venue":"Anandam Green Resort, Sehore"},{"id":"baraat","name":"Baarat","date":"2027-02-15","time":"7:00 PM - 9:00 PM","venue":"Anandam Green Resort, Sehore"},{"id":"reception","name":"Reception","date":"2027-02-15","time":"8:00 PM onwards","venue":"Anandam Green Resort, Sehore"}],"story":{"show":false,"customHashtag":"","tags":[]},"gallery":{"show":true,"layout":"4","photos":[]},"thingsToKnow":[],"rsvp":{"mode":"whatsapp","heading":"Will you join us?","subtext":"We've saved a seat for you — at our table, in our hearts, and under the royal sky. Come celebrate with us as we begin this new chapter together.","btnText":"Yes, I'll be there","whatsapp":""},"music":{"enabled":false,"src":"","name":""},"calendarUrls":{"google":"","apple":""}}</script>
+<script>window.__WEDDING_CONFIG__ = JSON.parse(document.getElementById('wedding-config').textContent);</script>
+<script>
+</script>
+<script>
+(function() {
+  var bride = 'Sanjana';
+  var groom = 'Aman';
+  var date  = '14 - 15 February 2027';
+  function updatePreloader() {
+    // Names in preloader
+    var n1 = document.querySelector('.pl-n1');
+    var n2 = document.querySelector('.pl-n2');
+    if (n1) n1.textContent = bride;
+    if (n2) n2.textContent = groom;
+    // Names in hero copy
+    var hb = document.querySelector('.hc-bride');
+    var hg = document.querySelector('.hc-groom');
+    if (hb) hb.textContent = bride;
+    if (hg) hg.textContent = groom;
+    var t11HeroBride = document.getElementById('heroBride');
+    var t11HeroGroom = document.getElementById('heroGroom');
+    if (t11HeroBride && bride) t11HeroBride.textContent = bride;
+    if (t11HeroGroom && groom) t11HeroGroom.textContent = groom;
+
+    // Fallback: replace any leaf text still reading the placeholder names
+    document.querySelectorAll('*').forEach(function(el) {
+      if (el.children.length === 0 && el.textContent.trim() === 'Priya') el.textContent = bride;
+      if (el.children.length === 0 && el.textContent.trim() === 'Arjun') el.textContent = groom;
+    });
+    // Date injection
+    if (date) {
+      var found = false;
+      document.querySelectorAll('*').forEach(function(el) {
+        if (el.children.length === 0) {
+          var txt = el.textContent.trim();
+          if (
+            txt === '14 February 2025' || txt === '14 FEBRUARY 2025' ||
+            el.classList.contains('pre-date') ||
+            el.classList.contains('preloader-date') ||
+            el.classList.contains('pl-date')
+          ) {
+            el.textContent = date;
+            found = true;
+          }
+        }
+      });
+      // No existing date element found — insert one after .pl-names
+      if (!found) {
+        var container = document.querySelector('.pl-names') || document.querySelector('.pl-content');
+        if (container && !container.querySelector('.pl-date-injected')) {
+          var dateEl = document.createElement('span');
+          dateEl.className = 'pl-date-injected';
+          dateEl.textContent = date;
+          dateEl.style.cssText = 'display:block;font-family:"DM Sans",sans-serif;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(196,152,90,0.75);margin-top:10px;';
+          container.appendChild(dateEl);
+        }
+      }
+    }
+  }
+  updatePreloader();
+  document.addEventListener('DOMContentLoaded', updatePreloader);
+})();
+</script><base href="https://assets.shaadipath.com/templates/template11/">
+<meta name="color-scheme" content="only light">
+<style>:root,html,body{color-scheme:only light}</style>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sanjana &amp; Aman's Wedding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;500;600&family=Pinyon+Script&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://assets.shaadipath.com/templates/template11/style.css?v=bbe9fdd7641dc578228a47c2ed2648f6518bd5c6">
+  <link rel="icon" type="image/png" href="assets/04-CC6lrDGi.png" />
+</head>
+<body class="intro-active">
+
+<!-- ═══════════════════════════════════
+     INTRO — tap to begin, animated Pichwai video
+═══════════════════════════════════ -->
+<section class="intro" id="intro" role="button" tabindex="0"
+         aria-label="Ring the bell to begin the celebration">
+
+  <video class="intro-video" id="introVideo"
+         muted playsinline webkit-playsinline="true" x5-playsinline="true"
+         disableRemotePlayback preload="auto" aria-hidden="true">
+    <source src="https://assets.shaadipath.com/templates/template11/assets/intro/intro.mp4" type="video/mp4">
+  </video>
+
+  <!-- Tap hint — fades in via pure CSS, no JS dependency -->
+  <div class="intro-hint" id="introHint" aria-hidden="true">
+    <p class="intro-hint-label">Ring the bell</p>
+    <p class="intro-hint-sub">to begin the celebration</p>
+  </div>
+
+  <div class="intro-vignette" aria-hidden="true"></div>
+</section>
+
+<!-- White/dark bloom transition overlay -->
+<div class="screen-bloom" id="screenBloom" aria-hidden="true"></div>
+
+<!-- ═══════════════════════════════════
+     PAGE
+═══════════════════════════════════ -->
+<main class="page" id="page" aria-hidden="true">
+
+  <!-- ─────────────  HERO  ───────────── -->
+  <section class="section hero-section" id="hero" aria-label="Sanjana and Aman">
+
+    <!-- Background video — courtyard with fountain & birds -->
+    <div class="hero-bg" aria-hidden="true">
+      <video class="hero-video" id="heroVideo"
+             autoplay muted loop playsinline webkit-playsinline="true"
+             disableRemotePlayback preload="auto">
+        <source src="https://assets.shaadipath.com/templates/template11/assets/hero/hero.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="hero-content" id="heroContent">
+      <h1 class="hero-names">
+        <span class="hero-name" id="heroBride">Sanjana</span>
+        <span class="hero-amp" aria-hidden="true">&amp;</span>
+        <span class="hero-name" id="heroGroom">Aman</span>
+      </h1>
+
+      <div class="hero-divider" aria-hidden="true">
+        <img class="hero-divider-img" src="https://assets.shaadipath.com/templates/template11/assets/hero/border.webp" alt="" decoding="async" draggable="false">
+      </div>
+
+      <div class="hero-meta">
+        <p class="hero-date" id="heroDate">14-15<sup class="date-ord">th</sup> Feb 2027</p>
+        <p class="hero-venue" id="heroVenue">Anandam Green Resort, Sehore</p>
+      </div>
+    </div>
+
+    <!-- Scroll cue -->
+    <a class="hero-scroll" href="#invite" aria-label="Scroll to invitation">
+      <span class="hero-scroll-label">Scroll</span>
+      <span class="hero-scroll-chevrons" aria-hidden="true">
+        <span class="hero-chevron"></span>
+        <span class="hero-chevron"></span>
+        <span class="hero-chevron"></span>
+      </span>
+    </a>
+  </section>
+
+  <!-- ─────────────  INVITE  ───────────── -->
+  <section class="section invite-section" id="invite" aria-labelledby="inviteNames">
+
+    <!-- Layer 1 — soft watercolour background -->
+    <div class="invite-bg" aria-hidden="true">
+      <img src="https://assets.shaadipath.com/templates/template11/assets/invite/invite_bg.webp" alt="" decoding="async" draggable="false">
+    </div>
+
+    <!-- Layer 3 — foreground hanging jhoomer lamps -->
+    <img class="invite-fg" src="https://assets.shaadipath.com/templates/template11/assets/invite/invite_fg.webp"
+         alt="" aria-hidden="true" decoding="async" draggable="false">
+
+    <!-- Layer 2 — ornate card -->
+    <div class="invite-card reveal-item" id="inviteCard">
+      <img class="invite-card-frame" src="https://assets.shaadipath.com/templates/template11/assets/invite/invite_card.webp"
+           alt="" aria-hidden="true" decoding="async" draggable="false">
+
+      <div class="invite-card-text">
+        <p class="invite-overline">With the blessings of the divine</p>
+
+        <!-- Grandparents — shown when invite.showGrandparents -->
+        <div class="invite-grandparents" id="inviteGrandparents" hidden>
+          <p>Late Mr. Ramulu &amp; Mrs. Gouru Bai</p>
+          <p>Mr. Shovakant Pathak &amp; Late Mrs. Prabha Devi</p>
+        </div>
+
+        <p class="invite-kicker">we request the honour of your presence<br>at the wedding celebration of</p>
+
+        <img class="invite-rule" src="https://assets.shaadipath.com/templates/template11/assets/invite/element_1.webp" alt="" aria-hidden="true" decoding="async" draggable="false">
+
+        <h2 class="invite-names" id="inviteNames">
+          <span class="invite-person">
+            <span class="invite-name">Sanjana</span>
+            <span class="invite-parent">(D/O Mr. Manoj Kumar Pathak &amp; Mrs. Bachchi Devi)</span>
+          </span>
+          <span class="invite-amp" aria-hidden="true">&amp;</span>
+          <span class="invite-person">
+            <span class="invite-name">Aman</span>
+            <span class="invite-parent">(S/O Mr. Srinivas Gudimalla &amp; Mrs. Sunitha Gudimalla)</span>
+          </span>
+        </h2>
+
+        <img class="invite-rule" src="https://assets.shaadipath.com/templates/template11/assets/invite/element_1.webp" alt="" aria-hidden="true" decoding="async" draggable="false">
+
+        <div class="invite-meta">
+          <p class="invite-date" id="inviteDate">14-15<sup class="date-ord">th</sup> February 2027</p>
+          <p class="invite-venue" id="inviteVenue">Anandam Green Resort, Sehore</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────  EVENTS  ───────────── -->
+  <section class="section events-section" id="events" aria-labelledby="eventsTitle">
+
+    <!-- Decorative Pichwai motifs scattered behind the cards — hanging pieces
+         from the top, grounded animals at the sides, peacock mid-height.
+         Purely ornamental (behind content, pointer-events off). -->
+    <div class="events-decor" aria-hidden="true">
+      <!-- Matching jhoomers hanging in both top corners -->
+      <img class="evt-decor evt-decor--jhoomer evt-decor--jhoomer-l" src="https://assets.shaadipath.com/templates/template11/assets/others/event_3.webp" alt="" decoding="async" loading="lazy" draggable="false">
+      <img class="evt-decor evt-decor--jhoomer evt-decor--jhoomer-r" src="https://assets.shaadipath.com/templates/template11/assets/others/event_3.webp" alt="" decoding="async" loading="lazy" draggable="false">
+      <!-- Two chandeliers hanging halfway down, in the left & right corners -->
+      <img class="evt-decor evt-decor--chandelier evt-decor--chandelier-1" src="https://assets.shaadipath.com/templates/template11/assets/others/event_1.webp" alt="" decoding="async" loading="lazy" draggable="false">
+      <img class="evt-decor evt-decor--chandelier evt-decor--chandelier-2" src="https://assets.shaadipath.com/templates/template11/assets/others/event_1.webp" alt="" decoding="async" loading="lazy" draggable="false">
+      <!-- Nazar (evil-eye) charms scattered down the sides -->
+      <img class="evt-decor evt-decor--nazar evt-decor--nazar-1" src="https://assets.shaadipath.com/templates/template11/assets/others/event_6.webp" alt="" decoding="async" loading="lazy" draggable="false">
+      <img class="evt-decor evt-decor--nazar evt-decor--nazar-2" src="https://assets.shaadipath.com/templates/template11/assets/others/event_6.webp" alt="" decoding="async" loading="lazy" draggable="false">
+      <img class="evt-decor evt-decor--nazar evt-decor--nazar-3" src="https://assets.shaadipath.com/templates/template11/assets/others/event_6.webp" alt="" decoding="async" loading="lazy" draggable="false">
+      <!-- Peacock + grounded animals tucked between cards -->
+      <img class="evt-decor evt-decor--peacock" src="https://assets.shaadipath.com/templates/template11/assets/others/event_4.webp" alt="" decoding="async" loading="lazy" draggable="false">
+      <img class="evt-decor evt-decor--camel"   src="https://assets.shaadipath.com/templates/template11/assets/others/event_2.webp" alt="" decoding="async" loading="lazy" draggable="false">
+      <img class="evt-decor evt-decor--horse"   src="https://assets.shaadipath.com/templates/template11/assets/others/event_5.webp" alt="" decoding="async" loading="lazy" draggable="false">
+    </div>
+
+    <div class="events-header reveal-item">
+      <p class="events-eyebrow">Celebration Journey</p>
+      <h2 class="events-title" id="eventsTitle">Our Events</h2>
+      <img class="events-title-rule" src="https://assets.shaadipath.com/templates/template11/assets/events/border_4.webp" alt="" aria-hidden="true" decoding="async" draggable="false">
+    </div>
+
+    <!-- Each ceremony is a royal hand-fan that opens (pivots on its handle)
+         as it scrolls into view. Cards injected by script.js. -->
+    <div class="events-list" id="eventsList" role="list" aria-label="Wedding events">
+      <!-- Fan cards injected by script.js -->
+    </div>
+  </section>
+
+  <!-- ─────────────  MEET THE COUPLE  ───────────── -->
+  <section class="section couple-section" id="couple" aria-labelledby="coupleTitle">
+
+    <!-- Watercolour arch background -->
+    <div class="couple-bg" aria-hidden="true">
+      <img src="https://assets.shaadipath.com/templates/template11/assets/meet_the_couple/meet_the_couple_bg.webp" alt="" decoding="async" draggable="false">
+    </div>
+
+    <!-- Content sits within the arch -->
+    <div class="couple-content">
+
+      <!-- Fluttering butterflies — bound to the content box so they flit around
+           the heading & story text (one crisp frame at a time; behind the text
+           so it stays readable). 1 = blue (butterfly_2), 2 = cream (butterfly). -->
+      <div class="couple-butterfly couple-butterfly--1" aria-hidden="true">
+        <span class="couple-butterfly-clip">
+          <img class="couple-butterfly-sheet" src="https://assets.shaadipath.com/templates/template11/assets/meet_the_couple/butterfly_2.webp" alt="" decoding="async" draggable="false">
+        </span>
+      </div>
+      <div class="couple-butterfly couple-butterfly--2" aria-hidden="true">
+        <span class="couple-butterfly-clip">
+          <img class="couple-butterfly-sheet" src="https://assets.shaadipath.com/templates/template11/assets/meet_the_couple/butterfly.webp" alt="" decoding="async" draggable="false">
+        </span>
+      </div>
+
+      <div class="couple-header">
+        <p class="couple-eyebrow">A love story</p>
+        <h2 class="couple-title" id="coupleTitle">Meet the Couple</h2>
+        <img class="couple-ornament" src="https://assets.shaadipath.com/templates/template11/assets/meet_the_couple/border_3.webp" alt="" aria-hidden="true" decoding="async" draggable="false">
+      </div>
+
+      <div class="couple-story">
+        <p class="couple-story-body" id="coupleStory">
+          A monsoon evening in Udaipur, a marigold archway, and a girl laughing in the rain — that was all it took. Three years, countless chai mornings, and one nervous rooftop proposal in Jaipur later, Sanjana &amp; Aman are ready to begin their most beautiful chapter yet.
+        </p>
+        <div class="couple-tags" id="coupleTags" aria-hidden="true"></div>
+        <p class="couple-hashtag" id="coupleHashtag" hidden></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────  GALLERY  ───────────── -->
+  <section class="section gallery-section" id="gallery" aria-labelledby="galleryTitle">
+
+    <div class="gallery-bg" aria-hidden="true">
+      <img src="https://assets.shaadipath.com/templates/template11/assets/gallery/gallery_bg.webp" alt="" decoding="async" draggable="false">
+    </div>
+
+    <div class="gallery-inner">
+      <div class="gallery-header reveal-item">
+        <span class="gallery-flourish gallery-flourish--top" aria-hidden="true"></span>
+        <h2 class="gallery-title" id="galleryTitle">Gallery</h2>
+        <span class="gallery-flourish gallery-flourish--bot" aria-hidden="true"></span>
+      </div>
+
+      <!-- Featured photo in the ornate frame -->
+      <div class="gallery-featured reveal-item" id="galleryFeatured" role="button" tabindex="0" aria-label="View photo full screen">
+        <img class="gallery-featured-photo" id="galleryFeaturedPhoto" alt="" decoding="async">
+        <img class="gallery-featured-art" src="https://assets.shaadipath.com/templates/template11/assets/gallery/gallery_outerframe.webp" alt="" aria-hidden="true" decoding="async">
+        <button class="gallery-arrow gallery-arrow--prev" id="galleryPrev" type="button" aria-label="Previous photo">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="gallery-arrow gallery-arrow--next" id="galleryNext" type="button" aria-label="Next photo">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <p class="gallery-caption" id="galleryCaption">Moments we love</p>
+      <div class="gallery-dots" id="galleryDots" role="tablist" aria-label="Gallery navigation"></div>
+
+      <!-- Thumbnail strip -->
+      <div class="gallery-thumbs" id="galleryThumbs" role="list" aria-label="Photo thumbnails">
+        <!-- Thumbs injected by script.js -->
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="gallery-lightbox" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+      <button class="gallery-lb-close" id="galleryLbClose" aria-label="Close">&#x2715;</button>
+      <button class="gallery-lb-prev"  id="galleryLbPrev"  aria-label="Previous photo">&#8249;</button>
+      <button class="gallery-lb-next"  id="galleryLbNext"  aria-label="Next photo">&#8250;</button>
+      <div class="gallery-lb-inner">
+        <img class="gallery-lb-img" id="galleryLbImg" alt="" decoding="async">
+        <p class="gallery-lb-caption" id="galleryLbCaption"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────  THINGS TO KNOW  ───────────── -->
+  <!-- Card icons resolve from assets/ttk/ (see TTK_ICONS in script.js);
+       a card with no matching icon falls back to the ring + placeholder dot. -->
+  <section class="section ttk-section" id="things" aria-labelledby="ttkTitle">
+
+    <!-- Layered atmosphere + floating orbs (decorative) -->
+    <div class="ttk-atm" aria-hidden="true"></div>
+    <div class="ttk-orb ttk-orb--1" aria-hidden="true"></div>
+    <div class="ttk-orb ttk-orb--2" aria-hidden="true"></div>
+    <div class="ttk-orb ttk-orb--3" aria-hidden="true"></div>
+
+    <div class="ttk-inner">
+      <div class="ttk-header reveal-item">
+        <p class="ttk-eyebrow">Guest Essentials</p>
+        <h2 class="ttk-title" id="ttkTitle">Things to Know</h2>
+        <img class="ttk-title-rule" src="https://assets.shaadipath.com/templates/template11/assets/ttk/border_2.webp" alt="" aria-hidden="true" decoding="async" draggable="false">
+        <p class="ttk-subline">A few thoughtful details to help you celebrate with ease.</p>
+      </div>
+
+      <ul class="ttk-grid" id="ttkGrid" role="list" aria-label="Guest information cards">
+        <!-- Cards injected by script.js -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- ─────────────  RSVP  ───────────── -->
+  <!-- Background: moonlit palace courtyard (assets/rsvp/rsvp_bg.webp) + fireworks canvas. -->
+  <section class="section rsvp-section" id="rsvp" aria-labelledby="rsvpHeadline">
+
+    <div class="rsvp-bg" aria-hidden="true"></div>
+    <div class="rsvp-veil" aria-hidden="true"></div>
+    <canvas class="rsvp-fireworks" id="rsvpFireworks" aria-hidden="true"></canvas>
+
+    <div class="rsvp-content">
+      <p class="rsvp-eyebrow rsvp-reveal">Join the celebration</p>
+
+      <h2 class="rsvp-headline rsvp-reveal" id="rsvpHeadline">Will you join us?</h2>
+
+      <p class="rsvp-body rsvp-reveal" id="rsvpBody">
+        We've saved a seat for you — at our table, in our hearts, and under the
+        royal sky. Come celebrate with us as we begin this new chapter together.
+      </p>
+
+      <div class="rsvp-cta-wrap rsvp-reveal">
+        <a class="rsvp-btn" id="rsvpBtn"
+           href="https://wa.me/910000000000?text=Yes%2C%20I%27ll%20be%20there%21"
+           target="_blank" rel="noreferrer">
+          <span class="rsvp-btn-inner" id="rsvpBtnText">Yes, I'll be there</span>
+        </a>
+        <p class="rsvp-helper" id="rsvpHelper">You'll be redirected to WhatsApp to confirm your attendance.</p>
+      </div>
+
+      <div class="rsvp-std rsvp-reveal">
+        <p class="rsvp-std-heading">Save the Date</p>
+        <div class="rsvp-std-btns">
+          <a class="rsvp-cal-btn" id="rsvpGcalBtn" href="#" target="_blank" rel="noreferrer">
+            <svg class="rsvp-cal-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <rect x="2" y="3" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M7 1v4M13 1v4M2 8h16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+            Google Calendar
+          </a>
+          <a class="rsvp-cal-btn" id="rsvpIcalBtn" href="#">
+            <svg class="rsvp-cal-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <rect x="2" y="3" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M7 1v4M13 1v4M2 8h16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              <path d="M10 11v3M8.5 14h3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+            Apple Calendar
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────  COUNTDOWN  ───────────── -->
+  <!-- Hanging jharokha garland (assets/invite/countdown.webp): 4 plaques hold
+       Days · Hours · Minutes · Seconds. Plaque centres measured from the art:
+       x = 17.9 / 39.6 / 60.4 / 81.9% · cartouche y-centre ≈ 59% (tunable via
+       --cd-y). Last section before the footer — a dark royal gradient blends the
+       moonlit RSVP above into the navy footer below. -->
+  <section class="section countdown-section" id="countdown" aria-labelledby="countdownTitle">
+    <div class="cd-glow cd-glow--l" aria-hidden="true"></div>
+    <div class="cd-glow cd-glow--r" aria-hidden="true"></div>
+
+    <div class="countdown-header reveal-item">
+      <h2 class="countdown-title" id="countdownTitle">
+        <span class="cd-title-lead">Counting Down to</span>
+        <span class="cd-title-forever">Forever</span>
+      </h2>
+      <img class="countdown-title-rule" src="https://assets.shaadipath.com/templates/template11/assets/events/border_4.webp" alt="" aria-hidden="true" decoding="async" draggable="false">
+    </div>
+
+    <div class="countdown-stage reveal-item">
+      <div class="countdown-frame">
+        <img class="countdown-art" src="https://assets.shaadipath.com/templates/template11/assets/invite/countdown.webp?v=2" alt="" decoding="async" draggable="false">
+        <div class="countdown-cells" id="countdownCells" role="timer" aria-label="Time remaining until the wedding">
+          <div class="cd-cell cd-cell--1"><span class="cd-num" id="cdDays">00</span><span class="cd-label">Days</span></div>
+          <div class="cd-cell cd-cell--2"><span class="cd-num" id="cdHours">00</span><span class="cd-label">Hours</span></div>
+          <div class="cd-cell cd-cell--3"><span class="cd-num" id="cdMins">00</span><span class="cd-label">Minutes</span></div>
+          <div class="cd-cell cd-cell--4"><span class="cd-num" id="cdSecs">00</span><span class="cd-label">Seconds</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="siteFooter" aria-label="Footer">
+  <img class="ft-border" src="https://assets.shaadipath.com/templates/template11/assets/invite/border_5.webp" alt="" aria-hidden="true" decoding="async" draggable="false">
+
+  <p class="ft-names">
+    <span class="ft-name" id="ftBride">Sanjana</span>
+    <span class="ft-amp" aria-hidden="true">&amp;</span>
+    <span class="ft-name" id="ftGroom">Aman</span>
+  </p>
+
+  <p class="ft-date" id="ftDate">14-15<sup class="date-ord">th</sup> February 2027</p>
+  <p class="ft-tagline">Forever begins today</p>
+
+  <div class="ft-bottom-rule" aria-hidden="true"></div>
+
+  <p class="ft-credit">Crafted with love on <a href="https://shaadipath.com" target="_blank" rel="noopener">ShaadiPath</a></p>
+</footer>
+
+<!-- ═══════════════════════════════════
+     FLOATING CONTROLS — music toggle + section navigation
+     TEMPORARY inline-SVG icons; swap for finished button art later.
+     Hidden during the intro; fades in once the hero is revealed.
+═══════════════════════════════════ -->
+<div class="fab-cluster" id="fabCluster" aria-label="Site controls">
+
+  <!-- Navigation panel (opens above the buttons) -->
+  <nav class="nav-panel" id="navPanel" aria-label="Page sections" aria-hidden="true">
+    <div class="nav-panel-head" aria-hidden="true">
+      <span class="nav-panel-eyebrow">Explore</span>
+      <span class="nav-panel-rule"></span>
+    </div>
+    <a class="nav-link" href="#hero"><span class="nav-link-label">Home</span></a>
+    <a class="nav-link" href="#invite"><span class="nav-link-label">Invitation</span></a>
+    <a class="nav-link" href="#events"><span class="nav-link-label">Events</span></a>
+    <a class="nav-link" href="#couple"><span class="nav-link-label">Meet the Couple</span></a>
+    <a class="nav-link" href="#gallery"><span class="nav-link-label">Gallery</span></a>
+    <a class="nav-link" href="#things"><span class="nav-link-label">Things to Know</span></a>
+    <a class="nav-link" href="#rsvp"><span class="nav-link-label">RSVP</span></a>
+    <a class="nav-link" href="#countdown"><span class="nav-link-label">Countdown</span></a>
+  </nav>
+
+  <!-- Music toggle — ornate Pichwai medallion -->
+  <button class="fab fab-music" id="musicToggle" type="button"
+          aria-label="Pause music" aria-pressed="true">
+    <img class="fab-img" src="https://assets.shaadipath.com/templates/template11/assets/others/music_button.webp" alt="" aria-hidden="true" decoding="async" draggable="false">
+  </button>
+
+  <!-- Navigation toggle — ornate Pichwai medallion -->
+  <button class="fab fab-nav" id="navToggle" type="button"
+          aria-label="Open navigation" aria-expanded="false">
+    <img class="fab-img" src="https://assets.shaadipath.com/templates/template11/assets/others/navigation_button.webp" alt="Navigation" decoding="async" draggable="false">
+  </button>
+</div>
+
+<!-- Intro audio — plays during the Ganesha intro video (video itself is muted) -->
+<audio id="introAudio" src="https://assets.shaadipath.com/templates/template11/assets/music/intro_audio.mp3" preload="auto" aria-hidden="true"></audio>
+<!-- Background music — default track; overridden by config when the user adds a song -->
+<audio id="bgMusic" src="https://assets.shaadipath.com/templates/template11/assets/music/music.mp3" loop preload="auto"></audio>
+
+<script src="https://assets.shaadipath.com/templates/template11/script.js?v=bbe9fdd7641dc578228a47c2ed2648f6518bd5c6" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var cfg = window.__WEDDING_CONFIG__;
+  if (!cfg || !cfg.invite || cfg.invite.parentsOrder !== 'groom_first') return;
+  var bEl = document.getElementById('iBrideParents');
+  var gEl = document.getElementById('iGroomParents');
+  if (bEl) { var em = bEl.closest('.fam-parents') && bEl.closest('.fam-parents').querySelector('em'); if (em) em.textContent = 'Son of'; }
+  if (gEl) { var em2 = gEl.closest('.fam-parents') && gEl.closest('.fam-parents').querySelector('em'); if (em2) em2.textContent = 'Daughter of'; }
+  /* Template 10 — swap the hardcoded "Daughter of" / "Son of" role labels.
+     buildConfigData already swapped the parent DATA, so #invBrideParents now
+     holds the groom's parents (and must read "Son of") and #invGroomParents
+     holds the bride's parents (and must read "Daughter of"). Without this the
+     labels stay fixed and the swap renders mismatched. */
+  var t10Roles = document.querySelectorAll('.inv-parents .inv-parent-role');
+  if (t10Roles.length >= 2) { t10Roles[0].textContent = 'Son of'; t10Roles[1].textContent = 'Daughter of'; }
+});
+</script>
+<script>
+document.addEventListener('click', function(e) {
+  if (e.defaultPrevented) return;
+  var link = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null;
+  if (!link) return;
+  var href = link.getAttribute('href') || '';
+  if (!href || href === '#') return;
+  var id = href.slice(1);
+  try { id = decodeURIComponent(id); } catch (_) {}
+  var target = document.getElementById(id);
+  if (!target) return;
+  e.preventDefault();
+  target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"ef5558f7810c49329caed0202f5f2d8d","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
